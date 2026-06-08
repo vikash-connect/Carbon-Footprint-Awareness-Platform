@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoTrack - Carbon Footprint Platform</title>
+    <!-- Content Security Policy -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net; style-src 'self'">
+    
+    <link rel="stylesheet" href="./styles/base.css">
+    <link rel="stylesheet" href="./styles/components.css">
+    <link rel="stylesheet" href="./styles/views.css">
+</head>
+<body>
+    <header class="header visually-hidden">
+        <h1>EcoTrack</h1>
+    </header>
+
+    <main id="app-container" class="container">
+        <!-- Views -->
+        <section id="view-onboarding" class="view" aria-hidden="false" aria-labelledby="title-onboarding">
+            <h1 id="title-onboarding" class="view__title">Your Baseline Footprint</h1>
+            <div id="onboarding-content"></div>
+        </section>
+
+        <section id="view-dashboard" class="view" aria-hidden="true" hidden aria-labelledby="title-dashboard">
+            <h1 id="title-dashboard" class="view__title">Dashboard</h1>
+            <div id="dashboard-content"></div>
+        </section>
+
+        <section id="view-actions" class="view" aria-hidden="true" hidden aria-labelledby="title-actions">
+            <h1 id="title-actions" class="view__title">Action Engine</h1>
+            <div id="actions-content"></div>
+        </section>
+
+        <section id="view-community" class="view" aria-hidden="true" hidden aria-labelledby="title-community">
+            <h1 id="title-community" class="view__title">Community & Progress</h1>
+            <div id="community-content"></div>
+        </section>
+    </main>
+
+    <nav id="main-nav" class="nav" aria-label="Main Navigation" hidden>
+        <button class="nav__item" data-target="dashboard" aria-label="Dashboard">
+            <span aria-hidden="true">📊</span>
+            <span>Dash</span>
+        </button>
+        <button class="nav__item" data-target="actions" aria-label="Actions">
+            <span aria-hidden="true">💡</span>
+            <span>Actions</span>
+        </button>
+        <button class="nav__item" data-target="community" aria-label="Community">
+            <span aria-hidden="true">🌍</span>
+            <span>Community</span>
+        </button>
+    </nav>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+    <script type="module" src="./src/main.js" defer></script>
+</body>
+</html>
