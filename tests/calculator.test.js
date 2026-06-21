@@ -14,7 +14,6 @@ describe('Calculator Module', () => {
             expect(result.total).toBe(0);
             expect(result.breakdown).toEqual(answers);
         });
-
         it('handles missing keys gracefully', () => {
             const result = calculateAnnualFootprintKg({ transport: 100 });
             expect(result.total).toBe(100);
@@ -45,7 +44,6 @@ describe('Calculator Module', () => {
             expect(classifyFootprint(15000)).toBe('high');
         });
     });
-
     describe('getTopCategory', () => {
         it('returns the category with the highest emission', () => {
             const breakdown = { transport: 100, food: 500, energy: 200, shopping: 50 };
