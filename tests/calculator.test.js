@@ -44,6 +44,7 @@ describe('Calculator Module', () => {
             expect(classifyFootprint(15000)).toBe('high');
         });
     });
+    
     describe('getTopCategory', () => {
         it('returns the category with the highest emission', () => {
             const breakdown = { transport: 100, food: 500, energy: 200, shopping: 50 };
