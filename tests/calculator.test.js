@@ -20,7 +20,6 @@ describe('Calculator Module', () => {
             expect(result.total).toBe(100);
             expect(result.breakdown).toEqual({ transport: 100, food: 0, energy: 0, shopping: 0 });
         });
-        
         it('calculates total footprint correctly for known values', () => {
             // e.g. driving 10km/day * 365 * 0.21 = 766.5 kg
             const answers = { transport: 766.5, food: 1000, energy: 2000, shopping: 500 };
